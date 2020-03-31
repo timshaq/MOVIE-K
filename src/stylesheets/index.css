@@ -1,0 +1,7 @@
+.card-image {
+  max-height: 350px;
+  object-fit: cover;
+}
+.card {
+  min-height: 500px;
+}
