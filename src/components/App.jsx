@@ -107,7 +107,7 @@ class MovieList extends React.Component {
     return (
       <div className="container">
         <div className="row mt-4">
-          <div className="col-lg-9 col-md-9 col-sm-12">
+          <div className="col-12">
             <div className="row mb-4">
               <div className="col-12">
                 < MovieTabs sortBy={ stateApp.sort_by }
@@ -141,21 +141,12 @@ class MovieList extends React.Component {
               </div>
             </div>
           </div>
-          
-          <div
-          className="col-lg-3 col-md-3 side-bar--right d-lg-block d-md-block  d-sm-none"
-          >
-            <div style={ {'position': 'fixed'} }>
-              <h4 className="col-12">{stateApp.sort_by.lang === "en-US" ? "Will Watch" : "Буду смотреть" }: { wishLength } {wishLength>1? "movies" : "movie"} </h4>
-              <ul
-              className="list-group"
-              >
-              { stateApp.moviesWillWatch.map( (wish, i) => {
-                return <MovieListWillWatch wish = { wish } key = { i } i = { i } />
-              } ) }
-              </ul>
-            </div>
-          </div>
+          <MovieListWillWatch
+                              moviesWillWatch={stateApp.moviesWillWatch}
+                              lang={stateApp.sort_by.lang}
+                              wishLength={wishLength}
+                              />
+
         </div>
       </div>
     );
