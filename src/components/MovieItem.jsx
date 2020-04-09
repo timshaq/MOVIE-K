@@ -26,7 +26,8 @@ class MovieItem extends React.Component {
       }
     };
     return (
-        <div className="col-4 mb-4">
+
+        <div className="col-lg-4 col-sm-6 col-xs-12 mb-4">
           <div  className="card">
             <img
               className="card-img-top card-image"

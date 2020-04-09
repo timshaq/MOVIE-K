@@ -14,7 +14,7 @@ const MovieTabs = ({ sortBy, updateSortBy, updateLang }) => {
   return (
       <div
       className="d-flex justify-content-between">
-        <ul className="tabs nav nav-pills">
+        <ul className="tabs nav nav-pills col-9">
           <li className="nav-item">
             <div
             className={getClassName("popularity.desc")}
@@ -40,7 +40,7 @@ const MovieTabs = ({ sortBy, updateSortBy, updateLang }) => {
             </div>
           </li>
         </ul>
-        <ul className="tabs nav nav-pills border rounded">
+        <ul className="tabs nav nav-pills border rounded tab--lang">
         <li className="nav-item">
           <div
           className={sortBy.lang === "ru-RU" ? "btn btn-success" : "btn" }
